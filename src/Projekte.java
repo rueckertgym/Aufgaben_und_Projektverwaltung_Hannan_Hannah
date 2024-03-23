@@ -1,2 +1,2 @@
-public class Projekt {
+public class Projekte {
 }
