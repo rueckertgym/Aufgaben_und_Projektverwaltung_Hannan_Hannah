@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class AufgabenUndVerwaltungstool
+class Projekte
+class Aufgaben
+
+class AufgabenUndVerwaltungstool{
+
+}
+
+class Projekte{
+    -String name
+    -String ertsellungsdatum
+    -String deadline
+    -double progress
+
+    +Projekte(String name, String ertsellungsdatum, String deadline, double progress)
+    +getName():String
+
+}
+
+class Aufgaben{
+    -String name
+    -String ertsellungsdatum
+    -String deadline
+    -double progress
+    -int wichtig
+}
+
+
+AufgabenUndVerwaltungstool " -AufgabenPriorityQueue" --> PriorityQueue
+AufgabenUndVerwaltungstool " -ProjektListe" --> List
+@enduml
