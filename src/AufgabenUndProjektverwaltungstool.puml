@@ -4,31 +4,48 @@
 class AufgabenUndVerwaltungstool
 class Projekte
 class Aufgaben
-
 class AufgabenUndVerwaltungstool{
 
 }
 
 class Projekte{
     -String name
-    -String ertsellungsdatum
-    -String deadline
+    -LocalDate ertsellungsdatum
+    -LocalDate deadline
     -double progress
 
     +Projekte(String name, String ertsellungsdatum, String deadline, double progress)
     +getName():String
+    +getErstellungsdatum():LocalDate
+    +getDeadline():LocalDate
+    +getProgress():String
+    +setName(String name)
+    +setErstellungsdatum(LocalDate ertsellungsdatum)
+    +setDeadline(LocalDate deadline)
+    +setProgress(double progress)
 
 }
 
 class Aufgaben{
-    -String name
-    -String ertsellungsdatum
-    -String deadline
-    -double progress
+    -String aufgabenstellung
+    -LocalDate erstellungsdatum
+    -LocalDate deadline
     -int wichtig
+
+    +Projekte(String aufgabenstellung, String deadline, int wichtig)
+    +getName():String
+    +getErstellungsdatum():LocalDate
+    +getDeadline():LocalDate
+    +getProgress():String
+    +getWichtig():int
+    +setName(String name)
+    +setErstellungsdatum(LocalDate erstellungsdatum)
+    +setDeadline(LocalDate deadline)
+    +setProgress(double progress)
+    +setWichtig(int wichtig)
 }
 
 
-AufgabenUndVerwaltungstool " -AufgabenPriorityQueue" --> PriorityQueue
-AufgabenUndVerwaltungstool " -ProjektListe" --> List
+AufgabenUndVerwaltungstool "-AufgabenPriorityQueue" --> PriorityQueue
+AufgabenUndVerwaltungstool "-ProjektListe" --> List
 @enduml
