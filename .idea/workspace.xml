@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="UML Diagramm in Package &quot;UmlDiagramm&quot; gepackt" />
+    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +49,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\abdul\Desktop\aufgaben-und-projektverwaltungstool-hannah-und-hannan\src\UmlDiagram" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Test" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -116,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711465259674</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)">
+      <option name="closed" value="true" />
+      <created>1711466097342</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711466097342</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +137,7 @@
     <MESSAGE value="Klasse &quot;Projekte&quot; implementiert" />
     <MESSAGE value="E" />
     <MESSAGE value="UML Diagramm in Package &quot;UmlDiagramm&quot; gepackt" />
-    <option name="LAST_COMMIT_MESSAGE" value="UML Diagramm in Package &quot;UmlDiagramm&quot; gepackt" />
+    <MESSAGE value="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)" />
   </component>
 </project>
