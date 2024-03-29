@@ -1,26 +1,27 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class AufgabenUndVerwaltungstool
+class AufgabenUndProjektverwaltungstool
 class Projekte
 class Aufgaben
-class AufgabenUndVerwaltungstool{
+
+class AufgabenUndProjektverwaltungstool{
 
 }
 
 class Projekte{
     -String name
-    -LocalDate ertsellungsdatum
+    -LocalDate erstellungsdatum
     -LocalDate deadline
     -double progress
 
-    +Projekte(String name, String ertsellungsdatum, String deadline, double progress)
+    +Projekte(String name, String erstellungsdatum, String deadline, double progress)
     +getName():String
     +getErstellungsdatum():LocalDate
     +getDeadline():LocalDate
     +getProgress():String
     +setName(String name)
-    +setErstellungsdatum(LocalDate ertsellungsdatum)
+    +setErstellungsdatum(LocalDate erstellungsdatum)
     +setDeadline(LocalDate deadline)
     +setProgress(double progress)
 
@@ -46,6 +47,6 @@ class Aufgaben{
 }
 
 
-AufgabenUndVerwaltungstool "-AufgabenPriorityQueue" --> PriorityQueue
-AufgabenUndVerwaltungstool "-ProjektListe" --> List
+AufgabenUndProjektverwaltungstool "-AufgabenPriorityQueue" --> PriorityQueue
+AufgabenUndProjektverwaltungstool "-ProjektListe" --> List
 @enduml
