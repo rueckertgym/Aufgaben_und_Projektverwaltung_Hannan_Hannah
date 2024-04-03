@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)">
-      <change afterPath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
+    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Erstellung der Klasse &quot;AufgabenUndProjektverwaltungstool&quot; (noch keine Methoden und Attribute)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UmlDiagram/AufgabenUndProjektverwaltungstool.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UmlDiagram/AufgabenUndProjektverwaltungstool.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711466948592</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Erstellung der Klasse &quot;AufgabenUndProjektverwaltungstool&quot; (noch keine Methoden und Attribute)">
+      <option name="closed" value="true" />
+      <created>1711742226993</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711742226993</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,6 +157,7 @@
     <MESSAGE value="E" />
     <MESSAGE value="UML Diagramm in Package &quot;UmlDiagramm&quot; gepackt" />
     <MESSAGE value="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)" />
+    <MESSAGE value="Erstellung der Klasse &quot;AufgabenUndProjektverwaltungstool&quot; (noch keine Methoden und Attribute)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erstellung der Klasse &quot;AufgabenUndProjektverwaltungstool&quot; (noch keine Methoden und Attribute)" />
   </component>
 </project>
