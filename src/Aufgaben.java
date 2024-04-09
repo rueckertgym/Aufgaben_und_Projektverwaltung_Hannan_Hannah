@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Aufgaben {
+public class Aufgaben implements Comparable<Aufgaben> {
     private String aufgabenstellung;
     private LocalDate erstellungsdatum;
     private LocalDate deadline;
@@ -53,5 +53,9 @@ public class Aufgaben {
 
     public void setWichtig(int wichtig) {
         this.wichtig = wichtig;
+    }
+
+    public int compareTo(Aufgaben other) {
+        return Integer.compare(this.wichtig, other.wichtig);
     }
 }

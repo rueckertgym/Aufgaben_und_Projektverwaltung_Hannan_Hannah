@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Deklarierung der Beziehungsattribute">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aufgaben.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgaben.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Projekte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
