@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Deklarierung der Beziehungsattribute">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aufgaben.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aufgaben.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
-    </list>
+    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Ergeanzung zur Klasse Aufgaben" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,8 +167,27 @@
       <option name="project" value="LOCAL" />
       <updated>1712164174118</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Ergeanzung zur Klasse Aufgaben">
+      <option name="closed" value="true" />
+      <created>1712694949640</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712694949640</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Klassen erstellt (Aufgaben, Projekte)" />
@@ -185,6 +199,7 @@
     <MESSAGE value="Test Ordner erstellen (nur &quot;Aufgaben&quot; und &quot;Projekte&quot;)" />
     <MESSAGE value="Erstellung der Klasse &quot;AufgabenUndProjektverwaltungstool&quot; (noch keine Methoden und Attribute)" />
     <MESSAGE value="Deklarierung der Beziehungsattribute" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deklarierung der Beziehungsattribute" />
+    <MESSAGE value="Ergeanzung zur Klasse Aufgaben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ergeanzung zur Klasse Aufgaben" />
   </component>
 </project>
