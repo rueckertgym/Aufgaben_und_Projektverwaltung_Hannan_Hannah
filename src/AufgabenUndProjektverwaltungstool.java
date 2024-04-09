@@ -17,5 +17,13 @@ public class AufgabenUndProjektverwaltungstool {
 
     }
 
+    public void ProjekteInWarteschlangeEinfuegen(Projekte neuesProjekt){
+        ProjektListe.insert(neuesProjekt);
+
+    }
+
+    //public void ProjektAusWarteschlangeEntfernen(String name){
+
+   // }
 
 }
