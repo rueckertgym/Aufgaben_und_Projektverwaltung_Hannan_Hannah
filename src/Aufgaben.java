@@ -8,7 +8,7 @@ public class Aufgaben {
 
     /**
      * Erstellung eines Konstruktors fuer die Klasse "Aufgaben" mit einer Aufgabenstellung, ein Erstellungsdatum,
-     * eine Deadline die im "yyyy-mm-dd" Format dargestellt wird und einen Wichitgkeitswert von 0-10, 0-100, etc..
+     * eine Deadline die im "yyyy-mm-dd" Format dargestellt wird und einen Wichitgkeitswert von 0-10.
      *
      * Und getter + setter Methoden ._.
      *

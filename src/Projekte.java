@@ -1,10 +1,12 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Projekte {
     private String name;
     private LocalDate erstellungsdatum;
     private LocalDate deadline;
-
+    private List<String> resourcen;
     /**
      * Konstruktor der Klasse "Projekte" mit dem Inhalt: Name, Deadline und Erstellungsdatum
      *
@@ -17,6 +19,8 @@ public class Projekte {
         this.name = name;
         this.erstellungsdatum = LocalDate.now();
         this.deadline = LocalDate.parse(deadline);
+        this.resourcen = new ArrayList<String>();
+
     }
 
     public String getName() {
@@ -41,5 +45,21 @@ public class Projekte {
 
     public void setDeadline(String deadline) {
         String pDeadline = deadline;
+    }
+
+    public List<String> getResourcen() {
+        return resourcen;
+    }
+
+    public void setResourcen(List<String> resourcen) {
+        resourcen = resourcen;
+    }
+
+    public void ResourcenInListEinfuegen(String resource){
+        resourcen.add(resource);
+    }
+
+    public void ResourcenAusListEntfernen(String resource){
+        resourcen.remove(resource);
     }
 }
