@@ -7,7 +7,8 @@ public class AufgabenUndProjektverwaltungstool {
     private List<Projekte> ProjektListe;
 
     public AufgabenUndProjektverwaltungstool() {
-        AufgabenPriorityQueue = new PriorityQueue<>();
+        Comparator<Aufgaben> sortByWichitg = Comparator.comparing(Aufgaben::wichtig);
+        PriorityQueue<Integer> AufgabenPriorityQueue = new PriorityQueue<>(sortByWichitg);
         ProjektListe = new LinkedList<>();
     }
 
