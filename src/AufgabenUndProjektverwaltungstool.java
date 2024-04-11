@@ -11,12 +11,27 @@ public class AufgabenUndProjektverwaltungstool {
         ProjektListe = new LinkedList<>();
     }
 
+    /**
+     * Fügt eine Aufgabe zur Queue hinzu, wenn "aufgabe" nicht null ist
+     */
     public void AufgabenInPriorityQueueEinfuegen(Aufgaben aufgabe) {
-        AufgabenPriorityQueue.offer(aufgabe);
-    }
 
+        if (aufgabe == null) {
+            throw new NullPointerException("data is null");
+        }else{
+            AufgabenPriorityQueue.offer(aufgabe);
+        }
+    }
+    
+    /**
+     * wenn die Queue nicht leer ist, wird der Head entfernt
+     */
     public void AufgabenAusPriorityQueueEntfernen() {
-        AufgabenPriorityQueue.poll();
+        if(AufgabenPriorityQueue.peek() == null){
+            System.out.println("Es sind keine Aufgaben vorhanden");
+        }else{
+            AufgabenPriorityQueue.poll();
+        }
 
     }
 
