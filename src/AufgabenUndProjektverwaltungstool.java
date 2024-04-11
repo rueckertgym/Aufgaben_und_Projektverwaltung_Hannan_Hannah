@@ -17,5 +17,10 @@ public class AufgabenUndProjektverwaltungstool {
 
     public void AufgabenAusPriorityQueueEntfernen() {
         AufgabenPriorityQueue.poll();
+
+    }
+
+    public void ProjekteZuProjektlisteHinzufügen(Projekte neuesProjekt){
+        Projektliste.insert(neuesProjekt);
     }
 }
