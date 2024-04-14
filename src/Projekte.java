@@ -6,20 +6,22 @@ public class Projekte {
     private String name;
     private LocalDate erstellungsdatum;
     private LocalDate deadline;
-    private List<String> resourcen;
+    private int fortschritt;
+    private List<String> ressourcen;
     /**
-     * Konstruktor der Klasse "Projekte" mit dem Inhalt: Name, Deadline und Erstellungsdatum
+     * Konstruktor der Klasse "Projekte" mit dem Inhalt: Name, Deadline und Erstellungsdatum, Ressourcen
      *
-     * Getter und Setter Methoden sind auch da ._.
+     * Getter und Setter Methoden sind auch da ._. + Hinzufügen und wegnehmen von Ressourcen.
      *
      * @param name
      * @param deadline
      */
-    public Projekte(String name, String deadline){
+    public Projekte(String name, String deadline, int fortschritt, List<String> ressourcen){
         this.name = name;
         this.erstellungsdatum = LocalDate.now();
         this.deadline = LocalDate.parse(deadline);
-        this.resourcen = new ArrayList<String>();
+        this.ressourcen = ressourcen;
+        this.fortschritt = fortschritt;
 
     }
 
@@ -48,18 +50,26 @@ public class Projekte {
     }
 
     public List<String> getResourcen() {
-        return resourcen;
+        return ressourcen;
     }
 
-    public void setResourcen(List<String> resourcen) {
-        resourcen = resourcen;
+    public void setRessourcen(List<String> ressourcen) {
+        ressourcen = ressourcen;
     }
 
-    public void ResourcenInListEinfuegen(String resource){
-        resourcen.add(resource);
+    public void ResourcenInListEinfuegen(String ressource){
+        ressourcen.add(resource);
     }
 
-    public void ResourcenAusListEntfernen(String resource){
-        resourcen.remove(resource);
+    public void ResourcenAusListEntfernen(String ressource){
+        ressourcen.remove(ressource);
+    }
+
+     public String getFortschritt() {
+        return fortschritt;
+    }
+
+    public void setFortschritt(int fortschritt) {
+        this.fortschritt = fortschritt;
     }
 }

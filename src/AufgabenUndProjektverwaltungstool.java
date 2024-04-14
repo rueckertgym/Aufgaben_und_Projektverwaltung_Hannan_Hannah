@@ -79,6 +79,10 @@ public class AufgabenUndProjektverwaltungstool {
         Projetkliste.toFirst();
         if(!Projektliste.isEmpty()){
             while(Projektliste.getContent()){
+                System.out.println(get.Content().getName() + "    ");
+                System.out.println(get.Content().getFortschritt() + " %  ");
+                System.out.println(get.Content().getDeadline() + "    ");
+                System.out.println("/n")
 
             }
         }
