@@ -1,5 +1,6 @@
+import java.util.Comparator;
 import java.util.LinkedList;
-import java.util.List;
+import utils.*;
 import java.util.PriorityQueue;
 
 /*Klasse verwaltet die Aufgaben und Projekte, Aufgaben in einer Priority Queue und Projekte in einer Liste.
@@ -11,9 +12,8 @@ public class AufgabenUndProjektverwaltungstool {
     private List<Projekte> ProjektListe;
 
     public AufgabenUndProjektverwaltungstool() {
-        Comparator<Aufgaben> sortByWichitg = Comparator.comparing(Aufgaben::wichtig);
-        PriorityQueue<Integer> AufgabenPriorityQueue = new PriorityQueue<>(sortByWichitg);
-        ProjektListe = new LinkedList<>();
+        PriorityQueue<Integer> AufgabenPriorityQueue = new PriorityQueue<>(Comparator.comparing(Aufgaben::wichitg));
+        ProjektListe = new List<>();
     }
 
     /**
@@ -42,9 +42,9 @@ public class AufgabenUndProjektverwaltungstool {
 
     /* neues Projekt wird erzeugt mit gegebenen Attributen und in Projektliste eingefügt
 @param String name(name des neuen Projektes), String deadline(deadline des neuen Projektes) */
-    public void ProjekteZuProjektlisteHinzufügen(String name, String deadline){
-        Projekt neuesProjekt = new Projekt(name, deadline);
-        Projektliste.insert(neuesProjekt);
+    public void ProjekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,String ressource){
+        Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource);
+        ProjektListe.insert(neuesProjekt);
     }
 
     /*Projekt mit gegebenen Namen wird aus der Liste Projetkliste entfernt, falls dies möglich ist
@@ -52,16 +52,16 @@ public class AufgabenUndProjektverwaltungstool {
     */
 
     public void ProjekteAusProjetklisteEntfernen(String nameDesProjekts){
-        if(!Projektliste.isEmpty()){
+        if(!ProjektListe.isEmpty()){
         boolean schleifeAbbrechen = false;
-        Projektliste.toFirst();
-        while(!schleifeAbbrechen && Projektliste.getContent()){
-            if(Projektliste.getContent().name.equals(nameDesProjekts)){
-                Projektliste.remove();
+        ProjektListe.toFirst();
+        while(!schleifeAbbrechen && ProjektListe.isEmpty()){
+            if(ProjektListe.getContent().getName().equals(nameDesProjekts)){
+                ProjektListe.remove();
                 schleifeAbbrechen = true;
             }
             
-            Projektliste.next();
+            ProjektListe.next();
             
             }
             if(!schleifeAbbrechen){
@@ -76,14 +76,50 @@ public class AufgabenUndProjektverwaltungstool {
 
 //Fortschritt und Deadline aller Projekte mit ihrem Namen in Reihenfolge der Liste ausgeben, keine Parameter
     public void fortschrittUndDeadlineAllerProjekteAusgeben(){
-        Projetkliste.toFirst();
-        if(!Projektliste.isEmpty()){
-            while(Projektliste.getContent()){
-                System.out.println(get.Content().getName() + "    ");
-                System.out.println(get.Content().getFortschritt() + " %  ");
-                System.out.println(get.Content().getDeadline() + "    ");
-                System.out.println("/n")
+        ProjektListe.toFirst();
+        if(!ProjektListe.isEmpty()){
+            while(!ProjektListe.isEmpty()){
+                System.out.println(ProjektListe.getContent().getName() + "    ");
+                System.out.println(ProjektListe.getContent().getFortschritt() + " %  ");
+                System.out.println(ProjektListe.getContent().getDeadline() + "    ");
+                System.out.println("/n");
+                ProjektListe.next();
+            }
+        }
+    }
 
+    public void ProjektResourcenZuweisung(){
+        ProjektListe.toFirst();
+        while (!ProjektListe.isEmpty()){
+            System.out.println("Das Projekt: " +ProjektListe.getContent().getName()+ "benötigt folgende resource: "+ ProjektListe.getContent().getSplit());
+            System.out.println(ProjektListe.getContent().getSplit());
+            ProjektListe.next();
+        }
+    }
+
+    public void ProjektFortschrittsueberwachung(String projektName){
+        ProjektListe.toFirst();
+        boolean gefunden = false;
+        while(!ProjektListe.isEmpty() && gefunden == false){
+            if(ProjektListe.getContent().getName().equals(projektName)){
+                gefunden = true;
+                System.out.print(ProjektListe.getContent().getName() + ": "+ ProjektListe.getContent().getFortschritt());
+            }else {
+                ProjektListe.next();
+            }
+        }
+    }
+
+    public void FortschrittAktuallisieren(String projektName, double neuerFortschritt) {
+        ProjektListe.toFirst();
+        boolean gefunden = false;
+        while (!ProjektListe.isEmpty() && gefunden == false) {
+            if (ProjektListe.getContent().getName().equals(projektName)) {
+                ProjektListe.getContent().setFortschritt(neuerFortschritt);
+                System.out.println("Fortschritt auf: "+ProjektListe.getContent().getFortschritt()+ "aktuallisiert" );
+                gefunden = true;
+            } else {
+                ProjektListe.next();
             }
         }
     }

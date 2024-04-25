@@ -1,13 +1,13 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
-
+import utils.*;
 public class Projekte {
     private String name;
     private LocalDate erstellungsdatum;
     private LocalDate deadline;
-    private int fortschritt;
+    private double fortschritt;
     private List<String> ressourcen;
+    private String[] split;
     /**
      * Konstruktor der Klasse "Projekte" mit dem Inhalt: Name, Deadline und Erstellungsdatum, Ressourcen
      *
@@ -16,12 +16,15 @@ public class Projekte {
      * @param name
      * @param deadline
      */
-    public Projekte(String name, String deadline, int fortschritt, List<String> ressourcen){
+    public Projekte(String name, String deadline, int fortschritt, String ressource){
         this.name = name;
         this.erstellungsdatum = LocalDate.now();
         this.deadline = LocalDate.parse(deadline);
         this.ressourcen = ressourcen;
         this.fortschritt = fortschritt;
+        ressourcen = new List<>();
+        split = ressource.split(",");
+
 
     }
 
@@ -53,23 +56,25 @@ public class Projekte {
         return ressourcen;
     }
 
-    public void setRessourcen(List<String> ressourcen) {
-        ressourcen = ressourcen;
-    }
 
     public void ResourcenInListEinfuegen(String ressource){
-        ressourcen.add(resource);
+        ressourcen.insert(ressource);
     }
 
-    public void ResourcenAusListEntfernen(String ressource){
-        ressourcen.remove(ressource);
-    }
-
-     public String getFortschritt() {
+     public int getFortschritt() {
         return fortschritt;
     }
 
-    public void setFortschritt(int fortschritt) {
+    public void setFortschritt(double fortschritt) {
         this.fortschritt = fortschritt;
     }
+
+    public String[] getSplit() {
+        return split;
+    }
+
+    public void setSplit(String[] split) {
+        this.split = split;
+    }
 }
+
