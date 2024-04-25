@@ -61,7 +61,7 @@ public class Projekte {
         ressourcen.insert(ressource);
     }
 
-     public int getFortschritt() {
+     public double getFortschritt() {
         return fortschritt;
     }
 

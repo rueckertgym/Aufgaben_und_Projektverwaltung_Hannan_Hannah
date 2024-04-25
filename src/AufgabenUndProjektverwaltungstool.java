@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.LinkedList;
 import utils.*;
+import java.util.Scanner;
 import java.util.PriorityQueue;
 
 /*Klasse verwaltet die Aufgaben und Projekte, Aufgaben in einer Priority Queue und Projekte in einer Liste.
@@ -11,8 +12,33 @@ public class AufgabenUndProjektverwaltungstool {
     private PriorityQueue<Aufgaben> AufgabenPriorityQueue;
     private List<Projekte> ProjektListe;
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("                      Devflow Verwaltungstool");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("Wollen Sie: \n[A] ein Projekt erstellen \n[B] eine Aufgabe erstellen \n[C] Die Ressourcenzuteilung " +
+                "fuer die jeweiligen Projekte sehen \n[D] Die Abheangigkeit zwischen den Aufgaben betrachten" +
+                "\n[E] Wissen wann sie mit x Projekt fertig sein sollen \n[F] Fortschritt aktuallisieren");
+        String option = scanner.nextLine();
+        while(true){
+            if(option.equals("A")){
+
+            } else if (option.equals("B")) {
+
+            }else if (option.equals("C")) {
+
+            }else if (option.equals("D")) {
+
+            }else if (option.equals("E")) {
+
+            }else if (option.equals("F")) {
+
+            }
+        }
+    }
+
     public AufgabenUndProjektverwaltungstool() {
-        PriorityQueue<Integer> AufgabenPriorityQueue = new PriorityQueue<>(Comparator.comparing(Aufgaben::wichitg));
+        PriorityQueue<Aufgaben> aufgabenPriorityQueue = new PriorityQueue<>(Comparator.comparing(Aufgaben::getWichtig));
         ProjektListe = new List<>();
     }
 
