@@ -2,7 +2,7 @@ package Test;
 
 import java.time.LocalDate;
 
-public class Aufgaben {
+public class Aufgaben implements Comparable<Aufgaben> {
     private String aufgabenstellung;
     private LocalDate erstellungsdatum;
     private LocalDate deadline;
@@ -10,7 +10,7 @@ public class Aufgaben {
 
     /**
      * Erstellung eines Konstruktors fuer die Klasse "Aufgaben" mit einer Aufgabenstellung, ein Erstellungsdatum,
-     * eine Deadline die im "yyyy-mm-dd" Format dargestellt wird und einen Wichitgkeitswert von 0-10, 0-100, etc..
+     * eine Deadline die im "yyyy-mm-dd" Format dargestellt wird und einen Wichitgkeitswert von 0-10.
      *
      * Und getter + setter Methoden ._.
      *
@@ -55,5 +55,9 @@ public class Aufgaben {
 
     public void setWichtig(int wichtig) {
         this.wichtig = wichtig;
+    }
+
+    public int compareTo(Aufgaben other) {
+        return Integer.compare(this.wichtig, other.wichtig);
     }
 }
