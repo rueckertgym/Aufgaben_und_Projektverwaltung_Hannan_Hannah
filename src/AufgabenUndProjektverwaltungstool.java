@@ -13,27 +13,43 @@ public class AufgabenUndProjektverwaltungstool {
     private List<Projekte> ProjektListe;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("                      Devflow Verwaltungstool");
-        System.out.println("-----------------------------------------------------------------------");
-        System.out.println("Wollen Sie: \n[A] ein Projekt erstellen \n[B] eine Aufgabe erstellen \n[C] Die Ressourcenzuteilung " +
-                "fuer die jeweiligen Projekte sehen \n[D] Die Abheangigkeit zwischen den Aufgaben betrachten" +
-                "\n[E] Wissen wann sie mit x Projekt fertig sein sollen \n[F] Fortschritt aktuallisieren");
-        String option = scanner.nextLine();
-        while(true){
-            if(option.equals("A")){
+        boolean tempWhileSchleife = true;
+        while(tempWhileSchleife) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("                      Devflow Verwaltungstool");
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println("Wollen Sie: \n[A] ein Projekt erstellen \n[B] eine Aufgabe erstellen \n[C] Die Ressourcenzuteilung " +
+                    "fuer die jeweiligen Projekte sehen \n[D] Aufgaben, die zu einem bestimmten Projekt gehören einsehen" +
+                    "\n[E] Den Fortschritt und die Deadline für alle Projekte einsehen \n[F] Fortschritt aktualisieren \n" +
+                    " [G] Projekt entfernen aus Liste \n [H] oberste Aufgabe aus PriorityQueue entfernen " +" \n [X] Programm abbrechen");
+            String option = scanner.nextLine();
 
-            } else if (option.equals("B")) {
+                if (option.equals("A")|| option.equals("a")) {
 
-            }else if (option.equals("C")) {
 
-            }else if (option.equals("D")) {
+                } else if (option.equals("B")|| option.equals("b")) {
 
-            }else if (option.equals("E")) {
+                } else if (option.equals("C")|| option.equals("c")) {
 
-            }else if (option.equals("F")) {
+                } else if (option.equals("D")|| option.equals("d")) {
 
-            }
+                } else if (option.equals("E")|| option.equals("e")) {
+
+                } else if (option.equals("F")|| option.equals("f")) {
+
+                }
+                else if (option.equals("G")|| option.equals("g")) {
+
+                }
+                else if (option.equals("H")|| option.equals("h")) {
+
+                }
+                else if (option.equals("X")|| option.equals("x")) {
+                    tempWhileSchleife = false;
+                }
+            else{
+                System.out.println("Bitte gebe eine der angegeben Buchstaben ein! \n");
+                }
         }
     }
 
