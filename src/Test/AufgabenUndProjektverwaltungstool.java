@@ -109,18 +109,18 @@ public class AufgabenUndProjektverwaltungstool {
 
 
     //Fortschritt und Deadline aller Projekte mit ihrem Namen in Reihenfolge der Liste ausgeben, keine Parameter
-    public void fortschrittUndDeadlineAllerProjekteAusgeben(){
+    public void fortschrittUndDeadlineAllerProjekteAusgeben() {
         ProjektListe.toFirst();
-        if(!ProjektListe.isEmpty()){
-            while(!ProjektListe.isEmpty()){
-                System.out.println(ProjektListe.getContent().getName() + "    ");
-                System.out.println(ProjektListe.getContent().getFortschritt() + " %  ");
-                System.out.println(ProjektListe.getContent().getDeadline() + "    ");
-                System.out.println("/n");
-                ProjektListe.next();
-            }
+        while (ProjektListe.hasAccess()) {
+            System.out.print(ProjektListe.getContent().getName() + "    ");
+            System.out.print(ProjektListe.getContent().getFortschritt() + " %  ");
+            System.out.print(ProjektListe.getContent().getDeadline() + "    ");
+            System.out.println();
+            ProjektListe.next();
         }
     }
+
+
 
     public void ProjektResourcenZuweisung(){
         ProjektListe.toFirst();

@@ -42,4 +42,16 @@ public class TestAufgabenUndProjektverwaltungstool {
         assertFalse(a.getProjektListe().isEmpty());
     }
 
+    @Test
+    public void testFortschrittUndDeadlineAllerProjekteAusgeben() {
+        AufgabenUndProjektverwaltungstool a = new AufgabenUndProjektverwaltungstool();
+
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 1", "2024-05-01", 25, "Details 1");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 2", "2024-05-15", 50, "Details 2");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 3", "2024-06-01", 75, "Details 3");
+
+        System.out.println("Fortschritt und Deadline aller Projekte:");
+        a.fortschrittUndDeadlineAllerProjekteAusgeben();
+    }
+
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Ergeanzung zur Klasse Aufgaben">
+    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" afterDir="false" />
@@ -57,8 +57,8 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst">
-    <configuration name="TestAufgabenUndProjektverwaltungstool.TestAufgabenInPriorityQueueEinfuegen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben">
+    <configuration name="TestAufgabenUndProjektverwaltungstool.TestFortschrittUndDeadlineAllerProjekteAusgeben" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
         <pattern>
@@ -68,7 +68,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
-      <option name="METHOD_NAME" value="TestAufgabenInPriorityQueueEinfuegen" />
+      <option name="METHOD_NAME" value="TestFortschrittUndDeadlineAllerProjekteAusgeben" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjekteZuProjektlisteHinzufügen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
         <pattern>
@@ -132,7 +132,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
-      <option name="METHOD_NAME" value="TestProjekteZuProjektlisteHinzufügen" />
+      <option name="METHOD_NAME" value="testFortschrittUndDeadlineAllerProjekteAusgeben" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben" />
+        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestFortschrittUndDeadlineAllerProjekteAusgeben" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernen" />
-        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteZuProjektlisteHinzufügen" />
-        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestAufgabenInPriorityQueueEinfuegen" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714074393947</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Test Klasse">
+      <option name="closed" value="true" />
+      <created>1714232910973</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714232910973</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,6 +318,7 @@
     <MESSAGE value="Erstellung der Klasse &quot;AufgabenUndProjektverwaltungstool&quot; (noch keine Methoden und Attribute)" />
     <MESSAGE value="Deklarierung der Beziehungsattribute" />
     <MESSAGE value="Ergeanzung zur Klasse Aufgaben" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ergeanzung zur Klasse Aufgaben" />
+    <MESSAGE value="Test Klasse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Klasse" />
   </component>
 </project>
