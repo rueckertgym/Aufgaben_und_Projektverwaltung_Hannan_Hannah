@@ -83,32 +83,32 @@ public class AufgabenUndProjektverwaltungstool {
     @param String nameDes Projekts
     */
 
-    public boolean ProjekteAusProjetklisteEntfernen(String nameDesProjekts){
+    public boolean ProjekteAusProjektlisteEntfernen(String nameDesProjekts) {
         boolean schleifeAbbrechen = false;
         ProjektListe.toFirst();
-        boolean gefunden = true;
-        while(!schleifeAbbrechen && ProjektListe.isEmpty()){
-            if(ProjektListe.getContent().getName().equals(nameDesProjekts)){
+        boolean gefunden = false;
+        while (!schleifeAbbrechen && ProjektListe.hasAccess()) {
+            if (ProjektListe.getContent().getName().equals(nameDesProjekts)) {
                 ProjektListe.remove();
                 schleifeAbbrechen = true;
-                return gefunden;
-            }else{
+                gefunden = true;
+            } else {
                 ProjektListe.next();
             }
         }
-        if(!schleifeAbbrechen){
-            System.out.println("Projekt mit Namen:" + nameDesProjekts + "existiert nicht in der Projektliste!");
-            gefunden = false;
-            return gefunden;
-        } else{
+        if (!schleifeAbbrechen && ProjektListe.isEmpty()) {
             System.out.println("Projektliste ist leer!");
-            gefunden = false;
-            return gefunden;
+        } else if (!gefunden) {
+            System.out.println("Projekt mit Namen: " + nameDesProjekts + " existiert nicht in der Projektliste!");
+        } else {
+            System.out.println("Projekt entfernt: " + nameDesProjekts);
         }
-
+        return gefunden;
     }
 
-//Fortschritt und Deadline aller Projekte mit ihrem Namen in Reihenfolge der Liste ausgeben, keine Parameter
+
+
+    //Fortschritt und Deadline aller Projekte mit ihrem Namen in Reihenfolge der Liste ausgeben, keine Parameter
     public void fortschrittUndDeadlineAllerProjekteAusgeben(){
         ProjektListe.toFirst();
         if(!ProjektListe.isEmpty()){
@@ -124,7 +124,7 @@ public class AufgabenUndProjektverwaltungstool {
 
     public void ProjektResourcenZuweisung(){
         ProjektListe.toFirst();
-        while (!ProjektListe.isEmpty()){
+        while (!ProjektListe.isEmpty() && ProjektListe.hasAccess()){
             System.out.println("Das Projekt: " +ProjektListe.getContent().getName()+ "benötigt folgende resource: "+ ProjektListe.getContent().getSplit());
             System.out.println(ProjektListe.getContent().getSplit());
             ProjektListe.next();

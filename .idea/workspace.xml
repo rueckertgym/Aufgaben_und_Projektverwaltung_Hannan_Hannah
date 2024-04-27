@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Ergeanzung zur Klasse Aufgaben">
-      <change afterPath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Aufgaben- und Projektverwaltungstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben- und Projektverwaltungstool.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Aufgaben.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Aufgaben.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Projekte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Projekte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/abdul/Desktop/Aufgaben- und Projektverwaltungstool/src/Main.java",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/abdul/Desktop/Aufgaben- und Projektverwaltungstool/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\abdul\Desktop\aufgaben-und-projektverwaltungstool-hannah-und-hannan\src\UmlDiagram" />
@@ -65,7 +57,7 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernen">
+  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst">
     <configuration name="TestAufgabenUndProjektverwaltungstool.TestAufgabenInPriorityQueueEinfuegen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
@@ -98,6 +90,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Aufgaben- und Projektverwaltungstool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
+      <option name="METHOD_NAME" value="TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Aufgaben- und Projektverwaltungstool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
+      <option name="METHOD_NAME" value="TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjekteZuProjektlisteHinzufügen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
@@ -116,6 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst" />
+        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernen" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteZuProjektlisteHinzufügen" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestAufgabenInPriorityQueueEinfuegen" />
@@ -251,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712695167272</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ergeanzung zur Klasse Aufgaben">
+      <option name="closed" value="true" />
+      <created>1714074393947</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714074393947</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,20 +311,5 @@
     <MESSAGE value="Deklarierung der Beziehungsattribute" />
     <MESSAGE value="Ergeanzung zur Klasse Aufgaben" />
     <option name="LAST_COMMIT_MESSAGE" value="Ergeanzung zur Klasse Aufgaben" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java</url>
-          <line>22</line>
-          <properties class="Test.TestAufgabenUndProjektverwaltungstool" method="TestProjekteAusProjetklisteEntfernen">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
