@@ -1,9 +1,9 @@
 import java.util.Comparator;
-import java.util.LinkedList;
 
 import Test.Aufgaben;
+import Test.Projekte;
 import utils.*;
-import java.util.Scanner;
+
 import java.util.PriorityQueue;
 
 /*Klasse verwaltet die Aufgaben und Projekte, Aufgaben in einer Priority Queue und Projekte in einer Liste.
@@ -50,8 +50,8 @@ public class AufgabenUndProjektverwaltungstool {
 
     /* neues Projekt wird erzeugt mit gegebenen Attributen und in Projektliste eingefügt
 @param String name(name des neuen Projektes), String deadline(deadline des neuen Projektes) */
-    public void projekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,List ressource){
-        Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource);
+    public void projekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,String ressource, String aufgaben){
+        Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource,aufgaben);
         ProjektListe.insert(neuesProjekt);
     }
 

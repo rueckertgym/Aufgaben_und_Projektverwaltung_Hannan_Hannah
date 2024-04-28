@@ -1,28 +1,31 @@
-
+import Test.Projekte;
 import utils.List;
-
 import java.util.Scanner;
 
+
+//Main klasse mit main methode, alle user interaktionen finden von hieraus statt,
+//Fehler bei der Eingabe vom user werden mit exceptions gehandlet
+//Ist wegen zeitproblemen noch nicht komplett aus lauffaehigkeit getestet :(
 public class Mainclass {
     public static void main(String[] args) {
         AufgabenUndProjektverwaltungstool aufgabenUndProjektverwaltungstoolObjekt = new AufgabenUndProjektverwaltungstool();
         boolean tempWhileSchleife = true;
-        while(tempWhileSchleife) {
+        while(tempWhileSchleife) {          //aussere while schleife mit allen Interaktion
             Scanner scanner = new Scanner(System.in);
             System.out.println("                      Devflow Verwaltungstool");
-            System.out.println("-----------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------"); //unten die moeglichen Optionen
             System.out.println("Wollen Sie: \n[A] ein Projekt erstellen \n[B] eine Aufgabe erstellen \n[C] Die Ressourcenzuteilung " +
                     "fuer die jeweiligen Projekte sehen \n[D] Aufgaben, die zu einem bestimmten Projekt gehören einsehen" +
                     "\n[E] Den Fortschritt und die Deadline für alle Projekte einsehen \n[F] Fortschritt aktualisieren \n" +
                     " [G] Projekt entfernen aus Liste \n [H] oberste Aufgabe aus PriorityQueue entfernen " +" \n [X] Programm abbrechen");
             String option = scanner.nextLine();
 
-            if (option.equals("A")|| option.equals("a")) {
-                boolean schleifenVariable1 = true;
+            if (option.equals("A")|| option.equals("a")) {  //Projekt erstellen und in Liste einfuegen
+                boolean schleifenVariable1 = true;   //gueltiges Objekt muss erstellt werden, sonst steckt user in endlosschleife fest
                 while(schleifenVariable1){
                     try{
 
-                        Scanner scanner1 = new Scanner(System.in);
+                        Scanner scanner1 = new Scanner(System.in);          //scanner objekte sind durchnummeriert sorry:(
                         System.out.println("Name des Projektes:");
                         String namePojekt = scanner1.nextLine();
 
@@ -39,23 +42,24 @@ public class Mainclass {
                         int anzahlRessourcenProjekt = Integer.valueOf(scanner14.nextLine());
 
                         System.out.println("Ressourcen des Projektes:") ;
-                        List<String> ressourcenDesProjekts = new List();
+                        String resourcenDesProjekts = "";
                         for(int i = 0; i < anzahlRessourcenProjekt; i++){
                             Scanner scanner15 = new Scanner(System.in);
                             String ressourceProjekt = scanner15.nextLine();
-                            ressourcenDesProjekts.insert(ressourceProjekt);
+                            resourcenDesProjekts += ressourceProjekt;
                         }
-
-                        aufgabenUndProjektverwaltungstoolObjekt.projekteZuProjektlisteHinzufügen(namePojekt, deadlineProjekt, fortschrittProjekt, ressourcenDesProjekts);
+                        //Abhaengigkeiten zu aufgaben, sind noch nicht vom User abgefragt worden -> FEHLT
+                        //Koennen nur vom code aus initialisiert werden
+                        aufgabenUndProjektverwaltungstoolObjekt.projekteZuProjektlisteHinzufügen(namePojekt, deadlineProjekt, fortschrittProjekt, resourcenDesProjekts, "Platzhalter zugewiesene Aufgaben");
                         schleifenVariable1 = false;}
 
-                        catch(Exception E){
+                        catch(Exception E){           //Exceptionhandling -> Aktion wird wiederholt
                             System.out.println("Fehler:"+ E + "\nBitte gebe gültige Werte ein!");
                         }
 
                     }
 
-        } else if (option.equals("B")|| option.equals("b")) {
+        } else if (option.equals("B")|| option.equals("b")) {  //Aufgabe erstellen und in Queue einfuegen
 
             boolean schleifenVariable2 = true;
             while(schleifenVariable2){
@@ -84,17 +88,17 @@ public class Mainclass {
                 }
 
         }
-        else if (option.equals("C")|| option.equals("c")) {
+        else if (option.equals("C")|| option.equals("c")) { //benoetigte Ressourcen aller Projekte ausgeben
 
-                aufgabenUndProjektverwaltungstoolObjekt.fortschrittUndDeadlineAllerProjekteAusgeben();
+                aufgabenUndProjektverwaltungstoolObjekt.projektResourcenZuweisung();
 
-        } else if (option.equals("D")|| option.equals("d")) {
+        } else if (option.equals("D")|| option.equals("d")) { //Abhaengigkeiten werden ausgegeben (gibt allerdings bisher noch keine)
 
             Scanner scanner3 = new Scanner(System.in);
             System.out.println("Name des Projektes(Falls gleich keine Aufgabennamen ausgegeben werden hat das angegebe Projekt entweder keine zugewiesenen Aufgaben oder es existiert kein Projekt mit diesem Namen):");
             String nameProjekt = scanner3.nextLine();
 
-            List <Projekte> Projektliste = aufgabenUndProjektverwaltungstoolObjekt.getProjektListe();
+            List<Projekte> Projektliste = aufgabenUndProjektverwaltungstoolObjekt.getProjektListe();
             Projektliste.toFirst();
             while(Projektliste.hasAccess()){
                 if(Projektliste.getContent().getName().equals(nameProjekt)){
@@ -104,11 +108,11 @@ public class Mainclass {
             }
 
 
-        } else if (option.equals("E")|| option.equals("e")) {
+        } else if (option.equals("E")|| option.equals("e")) { //fortschritt und deadline aller projekte werden ausgegeben
                 aufgabenUndProjektverwaltungstoolObjekt.fortschrittUndDeadlineAllerProjekteAusgeben();
 
-        } else if (option.equals("F")|| option.equals("f")) {
-            try{
+        } else if (option.equals("F")|| option.equals("f")) { //fortschritt bei einen angegebenen Projekt wird aktualisiert
+            try{             //wenn diese Optionen Fehler enthaelt und abgefangen wird, muss sie manuell erneut gestartet werden
 
                 Scanner scanner4 = new Scanner(System.in);
                 System.out.println("Name des Projektes:");
@@ -121,12 +125,12 @@ public class Mainclass {
                 aufgabenUndProjektverwaltungstoolObjekt.fortschrittAktuallisieren(namePojekt, neuerFortschrittProjekt);
             }
             catch(Exception E){
-                System.out.println("Fehler:"+ E + "\n Bitte gebe gültige Werte ein!");
+                System.out.println("Fehler:"+ E + "\n Bitte gebe gültige Werte ein!, Aktion wurde abgebrochen, bitte waehle sie erneut aus!");
             }
 
 
         }
-        else if (option.equals("G")|| option.equals("g")) {
+        else if (option.equals("G")|| option.equals("g")) { // angegebenes Projekt wird aus Projektliste entfernt
 
             Scanner scanner5 = new Scanner(System.in);
             System.out.println("Name des Projektes:");
@@ -135,12 +139,12 @@ public class Mainclass {
             aufgabenUndProjektverwaltungstoolObjekt.projekteAusProjetklisteEntfernen(nameProjekt);
 
         }
-        else if (option.equals("H")|| option.equals("h")) {
+        else if (option.equals("H")|| option.equals("h")) {  //angegebene aufgabe wird aus Queue entfernt
 
                 aufgabenUndProjektverwaltungstoolObjekt.aufgabenAusPriorityQueueEntfernen();
 
         }
-        else if (option.equals("X")|| option.equals("x")) {
+        else if (option.equals("X")|| option.equals("x")) { //Ganzes Programm wird abgebrochen
             tempWhileSchleife = false;
         }
         else{
