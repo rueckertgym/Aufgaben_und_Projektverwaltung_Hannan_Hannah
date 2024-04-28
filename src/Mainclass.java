@@ -1,5 +1,4 @@
-import Test.AufgabenUndProjektverwaltungstool;
-import Test.Projekte;
+
 import utils.List;
 
 import java.util.Scanner;
@@ -119,7 +118,7 @@ public class Mainclass {
                 System.out.println("Neuer Fortschritt des Projektes:") ;
                 double neuerFortschrittProjekt = Double.valueOf(Integer.valueOf(scanner41.nextLine()));
 
-                aufgabenUndProjektverwaltungstoolObjekt.fortschrittAktualisieren(namePojekt, neuerFortschrittProjekt);
+                aufgabenUndProjektverwaltungstoolObjekt.fortschrittAktuallisieren(namePojekt, neuerFortschrittProjekt);
             }
             catch(Exception E){
                 System.out.println("Fehler:"+ E + "\n Bitte gebe gültige Werte ein!");

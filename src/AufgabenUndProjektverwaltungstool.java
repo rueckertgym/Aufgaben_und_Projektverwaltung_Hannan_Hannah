@@ -23,8 +23,7 @@ public class AufgabenUndProjektverwaltungstool {
     /**
      * Fügt eine Aufgabe zur Queue hinzu, wenn "aufgabe" nicht null ist
      */
-    public void aufgabenInPriorityQueueEinfuegen(String aufg
-    abenstellung, String deadline, int wichtig) {
+    public void aufgabenInPriorityQueueEinfuegen(String aufgabenstellung, String deadline, int wichtig) {
         Aufgaben a = new Aufgaben(aufgabenstellung, deadline, wichtig);
             AufgabenPriorityQueue.offer(a);
         }
@@ -51,7 +50,7 @@ public class AufgabenUndProjektverwaltungstool {
 
     /* neues Projekt wird erzeugt mit gegebenen Attributen und in Projektliste eingefügt
 @param String name(name des neuen Projektes), String deadline(deadline des neuen Projektes) */
-    public void projekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,ArrayList ressource){
+    public void projekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,List ressource){
         Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource);
         ProjektListe.insert(neuesProjekt);
     }

@@ -16,14 +16,14 @@ public class Projekte {
      * @param name
      * @param deadline
      */
-    public Projekte(String name, String deadline, int fortschritt, String ressource){
+    public Projekte(String name, String deadline, int fortschritt, List ressource){
         this.name = name;
         this.erstellungsdatum = LocalDate.now();
         this.deadline = LocalDate.parse(deadline);
         this.ressourcen = ressourcen;
         this.fortschritt = fortschritt;
         ressourcen = new List<>();
-        split = ressource.split(",");
+
 
 
     }
