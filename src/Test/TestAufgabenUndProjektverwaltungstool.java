@@ -2,6 +2,7 @@ package Test;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+//Namen der Methoden aus der Testklasse sind veraltet :(
 
 public class TestAufgabenUndProjektverwaltungstool {
 

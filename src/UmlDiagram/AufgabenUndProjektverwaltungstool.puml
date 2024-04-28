@@ -6,44 +6,70 @@ class Projekte
 class Aufgaben
 
 class AufgabenUndProjektverwaltungstool{
+    + AufgabenUndProjektverwaltungstool()
+    + aufgabenInPriorityQueueEinfuegen(aufgabenstellung: String, deadline: String, wichtig: int): void
+    + getAufgabenPriorityQueue(): PriorityQueue<Aufgaben>
+    + getProjectList(): List<Projecte>
+    + aufgabenAusPriorityQueueEntfernen(): void
+    + projekteZuProjektlisteHinzufuegen(name: String, deadline: String, fortschritt: int, ressource: String, aufgaben: String): void
+    + projekteAusProjektlisteEntfernen(nameDesProjekts: String): void
+    + fortschrittUndDeadlineAllerProjekteAusgeben(): void
+    + projektResourcenZuweisung(): void
+    + projektFortschrittsueberwachung(projektName: String): void
+    + fortschrittAktuallisieren(projektName: String, neuerFortschritt: double): void
 
+}
+class Main{
++ Mainclass()
++ main(args: String[]): void
 }
 
 class Projekte{
-    -String name
-    -LocalDate erstellungsdatum
-    -LocalDate deadline
-    -double progress
+    - name: String
+    - erstellungsdatum: LocalDate
+    - deadline: LocalDate
+    - fortschritt: double
+    - ressourcen: List<String>
+    - split: String[]
+    - abhaengigkeiten: List<String>
+    - splitAbhaengigkeiten: String[]
 
-    +Projekte(String name, String erstellungsdatum, String deadline, double progress)
-    +getName():String
-    +getErstellungsdatum():LocalDate
-    +getDeadline():LocalDate
-    +getProgress():String
-    +setName(String name)
-    +setErstellungsdatum(LocalDate erstellungsdatum)
-    +setDeadline(LocalDate deadline)
-    +setProgress(double progress)
+    + Projekte(name: String, deadline: String, fortschritt: double, ressourcen: String, aufgabenstellung: String)
+    + getName(): String
+    + setName(name: String): void
+    + getErstellungsdatum(): LocalDate
+    + setErstellungsdatum(erstellungsdatum: LocalDate): void
+    + getDeadline(): LocalDate
+    + setDeadline(deadline: String): void
+    + getResourcen(): List<String>
+    + ResourcenInListEinfuegen(ressource: String): void
+    + getFortschritt(): double
+    + setFortschritt(fortschritt: double): void
+    + getSplit(): String[]
+    + setSplit(split: String[]): void
+    + getSplitAbheangigkeiten(): String[]
+    + setSplitAbheangigkeiten(splitAbheangigkeiten: String[]): void
+
 
 }
 
 class Aufgaben{
-    -String aufgabenstellung
-    -LocalDate erstellungsdatum
-    -LocalDate deadline
-    -int wichtig
+    - aufgabenstellung: String
+    - erstellungsdatum: LocalDate
+    - deadline: LocalDate
+    - wichtig: int
 
-    +Projekte(String aufgabenstellung, String deadline, int wichtig)
-    +getName():String
-    +getErstellungsdatum():LocalDate
-    +getDeadline():LocalDate
-    +getProgress():String
-    +getWichtig():int
-    +setName(String name)
-    +setErstellungsdatum(LocalDate erstellungsdatum)
-    +setDeadline(LocalDate deadline)
-    +setProgress(double progress)
-    +setWichtig(int wichtig)
+    + Aufgaben(aufgabenstellung: String, deadline: String, wichtig: int)
+    + getAufgabenstellung(): String
+    + setAufgabenstellung(aufgabenstellung: String): void
+    + getErstellungsdatum(): LocalDate
+    + setErstellungsdatum(erstellungsdatum: LocalDate): void
+    + getDeadline(): LocalDate
+    + setDeadline(deadline: LocalDate): void
+    + getWichtig(): int
+    + setWichtig(wichtig: int): void
+    + compareTo(other: Aufgaben): int
+
 }
 
 

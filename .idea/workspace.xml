@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse">
-      <change afterPath="$PROJECT_DIR$/src/Mainclass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UmlDiagram/AufgabenUndProjektverwaltungstool.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UmlDiagram/AufgabenUndProjektverwaltungstool.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +54,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Test" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung">
@@ -316,7 +317,31 @@
       <option name="project" value="LOCAL" />
       <updated>1714314716346</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Test Klasse">
+      <option name="closed" value="true" />
+      <created>1714314808785</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714314808785</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Test Klasse">
+      <option name="closed" value="true" />
+      <created>1714315223923</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1714315223923</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Test Klasse">
+      <option name="closed" value="true" />
+      <created>1714318442105</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714318442105</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
