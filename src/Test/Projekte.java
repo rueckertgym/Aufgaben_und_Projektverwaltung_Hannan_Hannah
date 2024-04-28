@@ -3,6 +3,7 @@ package Test;
 import utils.List;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class Projekte {
     private String name;
@@ -11,25 +12,33 @@ public class Projekte {
     private double fortschritt;
     private List<String> ressourcen;
     private String[] split;
+    private List<String> abhaengigkeiten;
+    private String[] splitAbhaengigkeiten;
+
     /**
-     * Konstruktor der Klasse "Projekte" mit dem Inhalt: Name, Deadline und Erstellungsdatum, Ressourcen
-     *
-     * Getter und Setter Methoden sind auch da ._. + Hinzufügen und wegnehmen von Ressourcen.
-     *
+     * Konstruktor fuer eine Instanz der Klasse Projekte mit Getter und Setter Methoden
      * @param name
      * @param deadline
+     * @param fortschritt
+     * @param ressourcen
+     * @param aufgabenstellung
      */
-    public Projekte(String name, String deadline, int fortschritt, String ressource){
+    public Projekte(String name, String deadline, double fortschritt, String ressourcen, String aufgabenstellung){
         this.name = name;
         this.erstellungsdatum = LocalDate.now();
-        this.deadline = LocalDate.parse(deadline);
-        this.ressourcen = ressourcen;
+        try {
+            this.deadline = LocalDate.parse(deadline);
+        } catch (DateTimeParseException e) {
+            System.out.println("Ungültiges Datumsformat für die Deadline: " + deadline);
+            this.deadline = null;
+        }
         this.fortschritt = fortschritt;
-        ressourcen = new List<>();
-        split = ressource.split(",");
-
-
+        this.ressourcen = new List<>();
+        this.split = ressourcen.split(",");
+        this.abhaengigkeiten = new List<>();
+        this.splitAbhaengigkeiten = aufgabenstellung.split(",");
     }
+
 
     public String getName() {
         return name;
@@ -52,9 +61,13 @@ public class Projekte {
     }
 
     public void setDeadline(String deadline) {
-        String pDeadline = deadline;
+        try {
+            this.deadline = LocalDate.parse(deadline);
+        } catch (DateTimeParseException e) {
+            System.out.println("Ungültiges Datumsformat für die Deadline: " + deadline);
+            this.deadline = null;
+        }
     }
-
     public List<String> getResourcen() {
         return ressourcen;
     }
@@ -78,6 +91,14 @@ public class Projekte {
 
     public void setSplit(String[] split) {
         this.split = split;
+    }
+
+    public String[] getSplitAbheangigkeiten() {
+        return splitAbhaengigkeiten;
+    }
+
+    public void setSplitAbheangigkeiten(String[] splitAbheangigkeiten) {
+        this.splitAbhaengigkeiten = splitAbheangigkeiten;
     }
 }
 

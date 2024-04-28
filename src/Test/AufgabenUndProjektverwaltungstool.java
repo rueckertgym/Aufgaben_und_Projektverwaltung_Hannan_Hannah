@@ -68,14 +68,18 @@ public class AufgabenUndProjektverwaltungstool {
             System.out.println("Es sind keine Aufgaben vorhanden");
         }else{
             AufgabenPriorityQueue.poll();
+            for(int i = 0; i > ProjektListe.getContent().getSplitAbheangigkeiten().length; i++){
+
+
+            }
         }
 
     }
 
     /* neues Projekt wird erzeugt mit gegebenen Attributen und in Projektliste eingefügt
 @param String name(name des neuen Projektes), String deadline(deadline des neuen Projektes) */
-    public void ProjekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,String ressource){
-        Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource);
+    public void ProjekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,String ressource, String aufgaben){
+        Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource,aufgaben);
         ProjektListe.insert(neuesProjekt);
     }
 
@@ -122,43 +126,61 @@ public class AufgabenUndProjektverwaltungstool {
 
 
 
-    public void ProjektResourcenZuweisung(){
+    public void projektResourcenZuweisung() {
         ProjektListe.toFirst();
-        while (!ProjektListe.isEmpty() && ProjektListe.hasAccess()){
-            System.out.println("Das Projekt: " +ProjektListe.getContent().getName()+ "benötigt folgende resource: "+ ProjektListe.getContent().getSplit());
-            System.out.println(ProjektListe.getContent().getSplit());
+        while (!ProjektListe.isEmpty() && ProjektListe.hasAccess()) {
+            Projekte projekt = ProjektListe.getContent();
+            System.out.print("Das Projekt: " + projekt.getName() + " benötigt folgende Ressourcen: ");
+            for (String ressource : projekt.getSplit()) {
+                System.out.print(ressource + ", ");
+            }
+            System.out.println();
             ProjektListe.next();
         }
     }
 
-    public void ProjektFortschrittsueberwachung(String projektName){
+    public void projektFortschrittsueberwachung(String projektName) {
         ProjektListe.toFirst();
         boolean gefunden = false;
-        while(!ProjektListe.isEmpty() && gefunden == false){
-            if(ProjektListe.getContent().getName().equals(projektName)){
+        while (!ProjektListe.isEmpty() && !gefunden && ProjektListe.hasAccess()) {
+            Projekte projekt = ProjektListe.getContent();
+            if (projekt.getName().equals(projektName)) {
                 gefunden = true;
-                System.out.print(ProjektListe.getContent().getName() + ": "+ ProjektListe.getContent().getFortschritt());
-            }else {
-                ProjektListe.next();
-            }
-        }
-    }
-
-    public void FortschrittAktuallisieren(String projektName, double neuerFortschritt) {
-        ProjektListe.toFirst();
-        boolean gefunden = false;
-        while (!ProjektListe.isEmpty() && gefunden == false) {
-            if (ProjektListe.getContent().getName().equals(projektName)) {
-                ProjektListe.getContent().setFortschritt(neuerFortschritt);
-                System.out.println("Fortschritt auf: "+ProjektListe.getContent().getFortschritt()+ "aktuallisiert" );
-                gefunden = true;
+                System.out.println(projekt.getName() + ": " + projekt.getFortschritt());
             } else {
                 ProjektListe.next();
             }
         }
+        if (!gefunden) {
+            System.out.println("Projekt mit Namen " + projektName + " wurde nicht gefunden.");
+        }
     }
 
-    public void AbheangigkeitZwischenAufgabenUndPriorityQueue(){
-
+    public void fortschrittAktualisieren(String projektName, double neuerFortschritt) {
+        ProjektListe.toFirst();
+        boolean gefunden = false;
+        while (!ProjektListe.isEmpty() && !gefunden && ProjektListe.hasAccess()) {
+            Projekte projekt = ProjektListe.getContent();
+            if (projekt.getName().equals(projektName)) {
+                gefunden = true;
+                projekt.setFortschritt(neuerFortschritt);
+                System.out.println("Fortschritt für Projekt " + projekt.getName() + " auf " + projekt.getFortschritt() + " aktualisiert.");
+            } else {
+                ProjektListe.next();
+            }
+        }
+        if (!gefunden) {
+            System.out.println("Projekt mit Namen " + projektName + " wurde nicht gefunden.");
+        }
     }
+
+    public void abhaengigkeitZwischenAufgabenUndPriorityQueue() {
+        ProjektListe.toFirst();
+        while (!ProjektListe.isEmpty() && ProjektListe.hasAccess()) {
+            Projekte projekt = ProjektListe.getContent();
+            System.out.println(projekt.getName() + ": " + projekt.getSplitAbheangigkeiten());
+            ProjektListe.next();
+        }
+    }
+
 }

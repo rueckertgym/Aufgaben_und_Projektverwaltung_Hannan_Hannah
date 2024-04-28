@@ -23,21 +23,21 @@ public class TestAufgabenUndProjektverwaltungstool {
     @Test
     public void TestProjekteZuProjektlisteHinzufügen(){
         AufgabenUndProjektverwaltungstool a = new AufgabenUndProjektverwaltungstool();
-        a.ProjekteZuProjektlisteHinzufügen("Prog", "2006-10-24",3,"as,2323,3224");
+        a.ProjekteZuProjektlisteHinzufügen("Prog", "2006-10-24",3,"as,2323,3224","wreq,ewr,ewr");
         assertFalse(a.getProjektListe().isEmpty());
     }
 
     @Test
     public void TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst(){
         AufgabenUndProjektverwaltungstool a = new AufgabenUndProjektverwaltungstool();
-        a.ProjekteZuProjektlisteHinzufügen("Prog", "2006-10-24",3,"as,2323,3224");
+        a.ProjekteZuProjektlisteHinzufügen("Prog", "2006-10-24",3,"as,2323,3224","df,we,243");
         a.ProjekteAusProjektlisteEntfernen("Prog");
         assertTrue(a.getProjektListe().isEmpty());
     }
     @Test
     public void TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst() {
         AufgabenUndProjektverwaltungstool a = new AufgabenUndProjektverwaltungstool();
-        a.ProjekteZuProjektlisteHinzufügen("Prog", "2006-10-24", 3, "as,2323,3224");
+        a.ProjekteZuProjektlisteHinzufügen("Prog", "2006-10-24", 3, "as,2323,3224", "1,2,3,4");
         a.ProjekteAusProjektlisteEntfernen("Preret");
         assertFalse(a.getProjektListe().isEmpty());
     }
@@ -46,12 +46,23 @@ public class TestAufgabenUndProjektverwaltungstool {
     public void testFortschrittUndDeadlineAllerProjekteAusgeben() {
         AufgabenUndProjektverwaltungstool a = new AufgabenUndProjektverwaltungstool();
 
-        a.ProjekteZuProjektlisteHinzufügen("Projekt 1", "2024-05-01", 25, "Details 1");
-        a.ProjekteZuProjektlisteHinzufügen("Projekt 2", "2024-05-15", 50, "Details 2");
-        a.ProjekteZuProjektlisteHinzufügen("Projekt 3", "2024-06-01", 75, "Details 3");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 1", "2024-05-01", 25, "Details 1","123,23");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 2", "2024-05-15", 50, "Details 2","8734,df,3");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 3", "2024-06-01", 75, "Details 3","sdf,2d,34");
 
-        System.out.println("Fortschritt und Deadline aller Projekte:");
+        System.out.println("Fortschritt und Deadline aller Projekte: ");
         a.fortschrittUndDeadlineAllerProjekteAusgeben();
+    }
+
+    @Test
+    public void TestProjektResourcenZuweisung(){
+        AufgabenUndProjektverwaltungstool a = new AufgabenUndProjektverwaltungstool();
+
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 1", "2024-05-01", 25, "Details 1","123,23");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 2", "2024-05-15", 50, "Details 2","8734,df,3");
+        a.ProjekteZuProjektlisteHinzufügen("Projekt 3", "2024-06-01", 75, "Details 3","sdf,2d,34");
+
+        a.abhaengigkeitZwischenAufgabenUndPriorityQueue();
     }
 
 }

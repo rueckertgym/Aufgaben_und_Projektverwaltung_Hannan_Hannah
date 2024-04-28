@@ -1,6 +1,7 @@
 package Test;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class Aufgaben implements Comparable<Aufgaben> {
     private String aufgabenstellung;
@@ -9,11 +10,7 @@ public class Aufgaben implements Comparable<Aufgaben> {
     private int wichtig;
 
     /**
-     * Erstellung eines Konstruktors fuer die Klasse "Aufgaben" mit einer Aufgabenstellung, ein Erstellungsdatum,
-     * eine Deadline die im "yyyy-mm-dd" Format dargestellt wird und einen Wichitgkeitswert von 0-10.
-     *
-     * Und getter + setter Methoden ._.
-     *
+     * Konstruktor fuer eine Instanz der Klasse Aufgaben mit Getter und Setter Methoden
      * @param aufgabenstellung
      * @param deadline
      * @param wichtig
@@ -21,7 +18,11 @@ public class Aufgaben implements Comparable<Aufgaben> {
     public Aufgaben(String aufgabenstellung, String deadline, int wichtig){
         this.aufgabenstellung = aufgabenstellung;
         this.erstellungsdatum = LocalDate.now();
-        this.deadline = LocalDate.parse(deadline);
+        try {
+            this.deadline = LocalDate.parse(deadline);
+        } catch (DateTimeParseException e) {
+            System.out.println("Ungültiges Datumsformat für Deadline: " + deadline);
+        }
         this.wichtig = wichtig;
     }
 
@@ -58,6 +59,11 @@ public class Aufgaben implements Comparable<Aufgaben> {
     }
 
     public int compareTo(Aufgaben other) {
-        return Integer.compare(this.wichtig, other.wichtig);
+        int result = Integer.compare(this.wichtig, other.wichtig);
+        if (result == 0) {
+            // Wenn die Wichtigkeiten gleich sind, vergleiche nach Deadline
+            result = this.deadline.compareTo(other.deadline);
+        }
+        return result;
     }
 }

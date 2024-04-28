@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse" />
+    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Aufgaben.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Aufgaben.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Projekte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Projekte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +59,7 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben">
+  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung">
     <configuration name="TestAufgabenUndProjektverwaltungstool.TestFortschrittUndDeadlineAllerProjekteAusgeben" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
@@ -70,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
         <pattern>
@@ -80,7 +86,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
-      <option name="METHOD_NAME" value="TestProjekteAusProjetklisteEntfernen" />
+      <option name="METHOD_NAME" value="TestProjektResourcenZuweisung" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestFortschrittUndDeadlineAllerProjekteAusgeben" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" />
-        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernen" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714250143088</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Test Klasse">
+      <option name="closed" value="true" />
+      <created>1714306882344</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714306882344</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,5 +338,20 @@
     <MESSAGE value="Ergeanzung zur Klasse Aufgaben" />
     <MESSAGE value="Test Klasse" />
     <option name="LAST_COMMIT_MESSAGE" value="Test Klasse" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java</url>
+          <line>57</line>
+          <properties class="Test.TestAufgabenUndProjektverwaltungstool" method="TestProjektResourcenZuweisung">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
