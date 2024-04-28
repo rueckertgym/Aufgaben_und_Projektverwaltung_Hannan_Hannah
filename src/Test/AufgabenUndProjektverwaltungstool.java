@@ -157,4 +157,8 @@ public class AufgabenUndProjektverwaltungstool {
             }
         }
     }
+
+    public void AbheangigkeitZwischenAufgabenUndPriorityQueue(){
+
+    }
 }

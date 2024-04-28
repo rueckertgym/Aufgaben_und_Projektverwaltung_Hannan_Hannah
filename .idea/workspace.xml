@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" afterDir="false" />
-    </list>
+    <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714232910973</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Test Klasse">
+      <option name="closed" value="true" />
+      <created>1714250143088</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714250143088</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
