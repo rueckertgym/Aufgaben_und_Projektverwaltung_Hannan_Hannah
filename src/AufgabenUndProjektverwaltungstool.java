@@ -14,149 +14,6 @@ public class AufgabenUndProjektverwaltungstool {
     private PriorityQueue<Aufgaben> AufgabenPriorityQueue;
     private List<Projekte> ProjektListe;
 
-    public static void main(String[] args) {
-        AufgabenUndProjektverwaltungstool aufgabenUndProjektverwaltungstoolObjekt = new AufgabenUndProjektverwaltungstool();
-        boolean tempWhileSchleife = true;
-        while(tempWhileSchleife) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("                      Devflow Verwaltungstool");
-            System.out.println("-----------------------------------------------------------------------");
-            System.out.println("Wollen Sie: \n[A] ein Projekt erstellen \n[B] eine Aufgabe erstellen \n[C] Die Ressourcenzuteilung " +
-                    "fuer die jeweiligen Projekte sehen \n[D] Aufgaben, die zu einem bestimmten Projekt gehören einsehen" +
-                    "\n[E] Den Fortschritt und die Deadline für alle Projekte einsehen \n[F] Fortschritt aktualisieren \n" +
-                    " [G] Projekt entfernen aus Liste \n [H] oberste Aufgabe aus PriorityQueue entfernen " +" \n [X] Programm abbrechen");
-            String option = scanner.nextLine();
-
-            if (option.equals("A")|| option.equals("a")) {
-                boolean schleifenVariable1 = true;
-                while(schleifenVariable1){
-                    try{
-                        
-                        Scanner scanner = new Scanner(System.in);  
-                        System.out.println("Name des Projektes:");
-                        String namePojekt = scanner.nextLine();
-
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Deadline des Projektes:") ;
-                        String deadlineProjekt = scanner.nextLine(); 
-
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Fortschritt des Projektes:") ;
-                        int fortschrittProjekt = scanner.nextLine();
-
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Anzahl an Ressourcen des Projektes:") ;
-                        int anzahlRessourcenProjekt = scanner.nextLine(); 
-
-                        System.out.println("Ressourcen des Projektes:") ;
-                        ArrayList <String> ressourcenDesProjekts = new ArrayList();
-                        for(int i = 0; i < anzahlRessourcenProjekt; i++){
-                            Scanner scanner = new Scanner(System.in);
-                            String ressourceProjekt = scanner.nextLine();
-                            ressourcenDesProjekts.add(ressourceProjekt);
-                        }
-
-                        this.ProjekteZuProjektlisteHinzufügen(namePojekt, deadlineProjekt, fortschrittProjekt, ressourcenDesProjekts);
-                        schleifenVariable1 = false;
-
-                        catch(Exception E){
-                            System.out.println("Fehler:"+ E + "\nBitte gebe gültige Werte ein!");
-                        }
-
-                }}}
-
-                } else if (option.equals("B")|| option.equals("b")) {
-
-                    boolean schleifenVariable2 = true;
-                    while(schleifenVariable2){
-                        try{
-                        
-                            Scanner scanner = new Scanner(System.in);  
-                            System.out.println("Name der Aufgabe:");
-                            String nameAufgabe = scanner.nextLine();
-
-                            Scanner scanner = new Scanner(System.in);
-                            System.out.println("Deadline der Aufgabe:") ;
-                            String deadlineAufgabe = scanner.nextLine(); 
-
-                            Scanner scanner = new Scanner(System.in);
-                            System.out.println("Wichtigkeitslevel der Aufgabe:") ;
-                            int wichtigkeitAufgabe = scanner.nextLine();
-
-
-                            this.AufgabenInPriorityQueueEinfuegen(nameAufgabe, deadlineAufgabe, wichtigkeitAufgabe);
-                            schleifenVariable2 = false;
-
-                            catch(Exception E){
-                                System.out.println("Fehler:"+ E + "\nBitte gebe gültige Werte ein!");
-                            }
-
-                }}
-
-                } else if (option.equals("C")|| option.equals("c")) {
-
-                    this.fortschrittUndDeadlineAllerProjekteAusgeben();
-
-                } else if (option.equals("D")|| option.equals("d")) {
-
-                    Scanner scanner = new Scanner(System.in);  
-                    System.out.println("Name des Projektes(Falls gleich keine Aufgabennamen ausgegeben werden hat das angegebe Projekt entweder keine zugewiesenen Aufgaben oder es existiert kein Projekt mit diesem Namen):");
-                    String namePojekt = scanner.nextLine();
-
-                    List <Projekte> Projektliste = this.getProjektListe;
-                    Projektliste.toFirst();
-                    while(Projektliste.hasAcces()){
-                        if(Projektliste.getContent().getName().equals(nameProjekt)){
-                            System.out.println(Projektliste.getContent().getSplitAbhaengigkeiten();
-
-                        }
-                    }
-
-
-                } else if (option.equals("E")|| option.equals("e")) {
-                    this.fortschrittUndDeadlineAllerProjekteAusgeben();
-
-                } else if (option.equals("F")|| option.equals("f")) {
-                    try{
-
-                     Scanner scanner = new Scanner(System.in);  
-                        System.out.println("Name des Projektes:");
-                        String namePojekt = scanner.nextLine();
-
-                         Scanner scanner = new Scanner(System.in);
-                        System.out.println("Neuer Fortschritt des Projektes:") ;
-                        int neuerFortschrittProjekt = scanner.nextLine();
-
-                        this.FortschrittAktuallisieren(neuerFortschrittProjekt, namePojekt);
-                    }
-                    catch(Exception E){
-                        System.out.println("Fehler:"+ E + "\n Bitte gebe gültige Werte ein!");
-                    }
-
-
-                }
-                else if (option.equals("G")|| option.equals("g")) {
-
-                    Scanner scanner = new Scanner(System.in);  
-                    System.out.println("Name des Projektes:");
-                    String namePojekt = scanner.nextLine();
-
-                    this.ProjekteAusProjetklisteEntfernen(nameProjekt);
-
-                }
-                else if (option.equals("H")|| option.equals("h")) {#
-
-                this.AufgabenAusPriorityQueueEntfernen();
-
-                }
-                else if (option.equals("X")|| option.equals("x")) {
-                    tempWhileSchleife = false;
-                }
-            else{
-                System.out.println("Bitte gebe eine der angegeben Buchstaben ein! \n");
-                }
-        }
-    }
 
     public AufgabenUndProjektverwaltungstool() {
         PriorityQueue<Aufgaben> aufgabenPriorityQueue = new PriorityQueue<>(Comparator.comparing(Aufgaben::getWichtig));
@@ -194,7 +51,7 @@ public class AufgabenUndProjektverwaltungstool {
 
     /* neues Projekt wird erzeugt mit gegebenen Attributen und in Projektliste eingefügt
 @param String name(name des neuen Projektes), String deadline(deadline des neuen Projektes) */
-    public void ProjekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,ArrayList ressource){
+    public void projekteZuProjektlisteHinzufügen(String name, String deadline, int fortschritt,ArrayList ressource){
         Projekte neuesProjekt = new Projekte(name, deadline,fortschritt,ressource);
         ProjektListe.insert(neuesProjekt);
     }
@@ -203,7 +60,7 @@ public class AufgabenUndProjektverwaltungstool {
     @param String nameDes Projekts
     */
 
-    public void ProjekteAusProjetklisteEntfernen(String nameDesProjekts){
+    public void projekteAusProjetklisteEntfernen(String nameDesProjekts){
         if(!ProjektListe.isEmpty()){
         boolean schleifeAbbrechen = false;
         ProjektListe.toFirst();
@@ -240,7 +97,7 @@ public class AufgabenUndProjektverwaltungstool {
         }
     }
 
-    public void ProjektResourcenZuweisung(){
+    public void projektResourcenZuweisung(){
         ProjektListe.toFirst();
         while (!ProjektListe.isEmpty()){
             System.out.println("Das Projekt: " +ProjektListe.getContent().getName()+ "benötigt folgende Ressource: "+ ProjektListe.getContent().getSplit());
@@ -249,7 +106,7 @@ public class AufgabenUndProjektverwaltungstool {
         }
     }
 
-    public void ProjektFortschrittsueberwachung(String projektName){
+    public void projektFortschrittsueberwachung(String projektName){
         ProjektListe.toFirst();
         boolean gefunden = false;
         while(!ProjektListe.isEmpty() && gefunden == false){
@@ -262,7 +119,7 @@ public class AufgabenUndProjektverwaltungstool {
         }
     }
 
-    public void FortschrittAktuallisieren(String projektName, double neuerFortschritt) {
+    public void fortschrittAktuallisieren(String projektName, double neuerFortschritt) {
         ProjektListe.toFirst();
         boolean gefunden = false;
         while (!ProjektListe.isEmpty() && gefunden == false) {
