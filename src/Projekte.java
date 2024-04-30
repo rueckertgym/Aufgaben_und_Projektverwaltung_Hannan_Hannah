@@ -27,8 +27,8 @@ public class Projekte {
         try {
             this.deadline = LocalDate.parse(deadline);
         } catch (DateTimeParseException e) {
-            System.out.println("Ungültiges Datumsformat für die Deadline: " + deadline);
-            this.deadline = null;
+            System.out.println("Ungültiges Datumsformat für die Deadline: " + deadline + " \nDeadline wurde automatisch auf 30.04.2024 gesetzt!");
+            this.deadline = LocalDate.parse("2024-04-20");
         }
         this.fortschritt = fortschritt;
         this.ressourcen = new List<>();

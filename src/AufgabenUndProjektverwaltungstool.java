@@ -86,11 +86,11 @@ public class AufgabenUndProjektverwaltungstool {
     public void fortschrittUndDeadlineAllerProjekteAusgeben(){
         ProjektListe.toFirst();
         if(!ProjektListe.isEmpty()){
-            while(!ProjektListe.isEmpty()){
+            while(ProjektListe.hasAccess()){
                 System.out.println(ProjektListe.getContent().getName() + "    ");
                 System.out.println(ProjektListe.getContent().getFortschritt() + " %  ");
                 System.out.println(ProjektListe.getContent().getDeadline() + "    ");
-                System.out.println("/n");
+                System.out.println(" ");
                 ProjektListe.next();
             }
         }

@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd4189d9-269e-4416-8b1b-ffb8762ab908" name="Changes" comment="Test Klasse">
+      <change afterPath="$PROJECT_DIR$/src/Test/Mainclass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UmlDiagram/AufgabenUndProjektverwaltungstool.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UmlDiagram/AufgabenUndProjektverwaltungstool.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben- und Projektverwaltungstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben- und Projektverwaltungstool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AufgabenUndProjektverwaltungstool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/abdul/Desktop/Aufgaben- und Projektverwaltungstool/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Mainclass.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung.executor": "Run",
+    "JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben.executor": "Debug",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/abdul/Desktop/Aufgaben- und Projektverwaltungstool/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\abdul\Desktop\aufgaben-und-projektverwaltungstool-hannah-und-hannan\src\UmlDiagram" />
@@ -57,7 +69,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung">
+  <component name="RunManager" selected="JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben">
+    <configuration name="Mainclass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Mainclass" />
+      <module name="Aufgaben- und Projektverwaltungstool" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestAufgabenUndProjektverwaltungstool.TestFortschrittUndDeadlineAllerProjekteAusgeben" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgaben- und Projektverwaltungstool" />
       <extension name="coverage">
@@ -85,22 +104,6 @@
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
       <option name="METHOD_NAME" value="TestProjektResourcenZuweisung" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Aufgaben- und Projektverwaltungstool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.TestAufgabenUndProjektverwaltungstool" />
-      <option name="METHOD_NAME" value="TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,18 +143,17 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.testFortschrittUndDeadlineAllerProjekteAusgeben" />
+        <item itemvalue="Application.Mainclass" />
+        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjektResourcenZuweisung" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestFortschrittUndDeadlineAllerProjekteAusgeben" />
         <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsVorhandenIst" />
-        <item itemvalue="JUnit.TestAufgabenUndProjektverwaltungstool.TestProjekteAusProjetklisteEntfernenWennEsNichtVorhandenIst" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-18.0.2-corretto-18.0.2-4caba194b151-5720f15e" />
         <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
       </set>
     </attachedChunks>
@@ -374,12 +376,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Test/TestAufgabenUndProjektverwaltungstool.java</url>
-          <line>57</line>
-          <properties class="Test.TestAufgabenUndProjektverwaltungstool" method="TestProjektResourcenZuweisung">
+          <line>47</line>
+          <properties class="Test.TestAufgabenUndProjektverwaltungstool" method="testFortschrittUndDeadlineAllerProjekteAusgeben">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
