@@ -83,8 +83,9 @@ public class AufgabenUndProjektverwaltungstool {
 
 //Fortschritt und Deadline aller Projekte mit ihrem Namen in Reihenfolge der Liste ausgeben, keine Parameter
     public void fortschrittUndDeadlineAllerProjekteAusgeben(){
-        ProjektListe.toFirst();
+
         if(!ProjektListe.isEmpty()){
+            ProjektListe.toFirst();
             while(ProjektListe.hasAccess()){
                 System.out.println(ProjektListe.getContent().getName() + "    ");
                 System.out.println(ProjektListe.getContent().getFortschritt() + " %  ");

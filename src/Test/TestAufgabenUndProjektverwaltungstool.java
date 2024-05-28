@@ -54,7 +54,7 @@ public class TestAufgabenUndProjektverwaltungstool {
 
         System.out.println("Fortschritt und Deadline aller Projekte: ");
         a.fortschrittUndDeadlineAllerProjekteAusgeben();
-        assertEquals();
+
     }
 
     @Test
