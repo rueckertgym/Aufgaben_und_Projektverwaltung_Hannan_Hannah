@@ -16,7 +16,7 @@ public class AufgabenUndProjektverwaltungstool {
 
 
     public AufgabenUndProjektverwaltungstool() {
-        PriorityQueue<Aufgaben> AufgabenPriorityQueue = new PriorityQueue<>(Comparator.comparing(Aufgaben::getWichtig));
+        AufgabenPriorityQueue = new PriorityQueue<>(Comparator.comparing(Aufgaben::getWichtig));
         ProjektListe = new List<>();
     }
 
