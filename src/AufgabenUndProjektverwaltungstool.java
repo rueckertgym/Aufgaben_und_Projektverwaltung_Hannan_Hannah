@@ -40,12 +40,11 @@ public class AufgabenUndProjektverwaltungstool {
      * wenn die Queue nicht leer ist, wird der Head entfernt
      */
     public void aufgabenAusPriorityQueueEntfernen() {
-        if(AufgabenPriorityQueue.peek() == null){
+        if(AufgabenPriorityQueue.isEmpty()){
             System.out.println("Es sind keine Aufgaben vorhanden");
         }else{
             AufgabenPriorityQueue.poll();
         }
-
     }
 
     /* neues Projekt wird erzeugt mit gegebenen Attributen und in Projektliste eingefügt
