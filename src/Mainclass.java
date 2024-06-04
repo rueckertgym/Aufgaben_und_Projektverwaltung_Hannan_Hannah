@@ -6,6 +6,10 @@ import java.util.Scanner;
 //Main klasse mit main methode, alle user interaktionen finden von hieraus statt,
 //Fehler bei der Eingabe vom user werden mit exceptions gehandlet
 //Ist wegen zeitproblemen noch nicht komplett aus lauffaehigkeit getestet :(
+
+/**
+ * Benutzerinteraktiv
+ */
 public class Mainclass {
     public static void main(String[] args) {
         AufgabenUndProjektverwaltungstool aufgabenUndProjektverwaltungstoolObjekt = new AufgabenUndProjektverwaltungstool();
